@@ -1,0 +1,32 @@
+{
+  "name": "scaffolding_name",
+  "version": "scaffolding_version",
+  "description": "scaffolding_description",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:staged": "lint-staged",
+    "test": "mocha"
+  },
+  "author": "scaffolding_author",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^8.2.2",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.28.0",
+    "eslint-plugin-mocha": "^9.0.0",
+    "lint-staged": "^11.0.0",
+    "mocha": "^9.0.0",
+    "prettier": "^2.3.1",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "npm run lint:staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{css,json,md}": "prettier --write"
+  }
+}

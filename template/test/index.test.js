@@ -1,10 +1,10 @@
 const chai = require('chai');
 chai.use(require('chai-as-promised'));
 const { expect } = chai;
-const index = require('../index');
+const index = require('../lib/index');
 
 describe('index', ()=>{
     it('test', ()=>{
-        index();
-    })
-})
+        expect(index()).to.be.true;
+    });
+});

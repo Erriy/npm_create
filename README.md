@@ -12,9 +12,9 @@
 - 配置 commitlint，自动检查 commit 信息是否合规
 - 配置 eslint 和 prettier，做语法检查和格式化
 
-## 已知问题
+## 注意事项
 
-- 第一次提交后 workflow 不执行（先提交一版到 main 分支，然后再重新修改版本号再提交）
+- **auto-publish 后会自动打标签并将当前分支和标签推送到 github**，酌情使用，默认关闭
 
 ## 使用方法
 
@@ -27,7 +27,6 @@
    # 查看使用方法
    npm init @erriy -- -h
    # 使用默认配置自动创建和自动发布功能（注意提前在github仓库配置secrets.NPM_TOKEN）
-   # auto-publish 后会自动打标签并自动将标签推送到github
    npm init @erriy -- --auto-publish
    ```
 

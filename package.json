@@ -1,6 +1,6 @@
 {
   "name": "@erriy/create",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "",
   "main": "lib/index.js",
   "bin": {
@@ -13,7 +13,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "test": ""
   },
   "repository": {
     "type": "git",

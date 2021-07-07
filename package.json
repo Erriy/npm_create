@@ -1,10 +1,10 @@
 {
   "name": "@erriy/create",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "",
   "main": "lib/index.js",
   "bin": {
-    "create-node": "lib/index.js"
+    "npm-create": "lib/index.js"
   },
   "files": [
     "lib",
@@ -26,7 +26,9 @@
   },
   "homepage": "https://github.com/Erriy/npm_create#readme",
   "dependencies": {
+    "@commitlint/config-angular": "^12.1.4",
     "commander": "^7.2.0",
+    "commitlint": "^12.1.4",
     "fs-extra": "^10.0.0"
   },
   "devDependencies": {
@@ -36,7 +38,10 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-commit": "npm run lint:staged"
+    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+    "commit-msg": "commitlint -E GIT_PARAMS",
+    "pre-commit": "npm run lint:staged",
+    "post-commit": "node script/post-commit.js"
   },
   "lint-staged": {
     "*.js": "eslint --fix",

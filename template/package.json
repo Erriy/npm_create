@@ -1,7 +1,4 @@
 {
-  "name": "scaffolding_name",
-  "version": "scaffolding_version",
-  "description": "scaffolding_description",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
@@ -10,8 +7,6 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "test": "mocha"
   },
-  "author": "scaffolding_author",
-  "license": "MIT",
   "devDependencies": {
     "@commitlint/config-angular": "^12.1.4",
     "@types/mocha": "^8.2.2",
